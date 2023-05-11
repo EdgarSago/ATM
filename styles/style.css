@@ -3,7 +3,6 @@
     --font-family-second: 'Poppins', sans-serif;
     --color-first: #7209b7;
     --color-second: #f1faee;
-    
 }
 
 *{
@@ -14,9 +13,12 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background-color: var(--color-second);
+    font-family: var(--font-family-second);
 }
 
+/* header */
 #info{
     display: flex;
     justify-content: space-between;
@@ -28,7 +30,6 @@ body{
 a{
     text-decoration: none;
     color: var(--color-second);
-    font-family: var(--font-family-second);
 }
 
 .cuadroInfo{
@@ -44,8 +45,105 @@ a{
     display: none;
 }
 
+/* main */
 .logo{
     display: flex;
     margin: 30px auto 30px;
     justify-content: center;
+}
+.logo img{
+    width: 14vw;
+}
+
+h1{
+    font-size: 14vw;
+    font-family: var(--font-family-first);
+    color: var(--color-first);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-first);
+    color: var(--color-second);
+    width: 60%;
+    height: 80%;
+    margin: auto;
+}
+
+label{
+    margin-top: 20px;
+}
+
+input{
+    margin-top: 10px;
+    font-family: var(--font-family-second);
+    text-align: center;
+}
+
+button{
+    margin: 20px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid var(--color-first);
+    background-color: var(--color-second);
+    color: var(--color-first);
+    font-family: var(--font-family-second);
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid var(--color-second);
+    background-color: var(--color-first);
+    color: var(--color-second);
+}
+
+button:active{
+    background-color: var(--color-first);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.alerta{
+    margin: 5px 0 -15px;
+    color: red;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.escondido{
+    display: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 14px;
+}
+
+@media only screen and (min-width:480px){
+    .logo img{
+        width: 12vw;
+    }
+    
+    h1{
+        font-size: 12vw;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .logo img{
+        width: 10vw;
+    }
+    
+    h1{
+        font-size: 10vw;
+    }
+    .form{
+        width: 30%;
+    }
 }
