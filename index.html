@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="index.js"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Titan+One&display=swap" rel="stylesheet">
+    <script type="module" src="index.js"></script>
     <title>ATM</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div>
-                <button>Users</button>
-                <button>About</button>
-                <button>Contacts</button>
-            </div>
-            <div>
-                <span>Usuario: Edgar <br> Password: 12345 <br> Usuario: Rocio <br> Password: 98765 <br> Usuario: Lizeth <br> Password: 24680 </span>
-                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla et temporibus sit, vero, laborum quasi facilis sed fugit veritatis reiciendis repudiandae soluta quae quisquam inventore eveniet quis voluptates cupiditate? In!</span>
-                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam deleniti molestias dolore corporis dignissimos pariatur consequatur voluptate qui fuga sit explicabo quisquam, culpa eius, facilis quia accusantium vero! Voluptatibus, dignissimos.</span>
-            </div>
-        </nav>
+        <ul id="info">
+            <li>
+                <a href="">Users</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contacts</a>
+            </li>
+        </ul>
+        <div>
+            <span class="oculto">
+                Usuario: Edgar <br> Password: 12345 <br>
+                Usuario: Rocio <br> Password: 98765 <br>
+                Usuario: Lizeth <br> Password: 24680
+            </span>
+            <span class="oculto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla et temporibus sit, vero, laborum quasi facilis sed fugit veritatis reiciendis repudiandae soluta quae quisquam inventore eveniet quis voluptates cupiditate? In!</span>
+            <span class="oculto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam deleniti molestias dolore corporis dignissimos pariatur consequatur voluptate qui fuga sit explicabo quisquam, culpa eius, facilis quia accusantium vero! Voluptatibus, dignissimos.</span>
+        </div>
     </header>
     <main>
-        <section>
+        <section class="logo">
             <img src="assets/logoBank.svg" alt="">
             <h1>SAGO BANK</h1>
         </section>

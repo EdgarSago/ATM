@@ -1,4 +1,51 @@
-.fa-solidfa-vault{
-    color: aqua;
-    background-color: aqua;
+:root{
+    --font-family-first: 'Titan One', cursive;
+    --font-family-second: 'Poppins', sans-serif;
+    --color-first: #7209b7;
+    --color-second: #f1faee;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#info{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: var(--color-first);
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-second);
+    font-family: var(--font-family-second);
+}
+
+.cuadroInfo{
+    display: flex;
+    margin: 30px;
+    padding: 30px;
+    justify-content: center;
+    background-color: var(--color-first);
+    color: var(--color-second);
+}
+
+.oculto{
+    display: none;
+}
+
+.logo{
+    display: flex;
+    margin: 30px auto 30px;
+    justify-content: center;
 }
