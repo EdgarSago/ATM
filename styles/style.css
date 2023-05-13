@@ -91,7 +91,7 @@ h1{
     color: var(--color-first);
 }
 
-.form{
+#form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,7 +143,7 @@ button:active{
 .alerta{
     margin: 5px 0 -15px;
     color: red;
-    font-size: 3vw;
+    font-size: 10px;
     text-align: center;
 }
 
@@ -154,7 +154,6 @@ button:active{
 /* main users */
 .material-symbols-outlined {
     margin: -23px 150px 0 0;
-    align-items: start;
     color: var(--color-first);
 }
 
