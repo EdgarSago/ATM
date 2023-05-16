@@ -43,11 +43,15 @@
             <form id="form">
                 <label for="user">Enter your Username</label>
                 <input id="user" type="text" name="user" placeholder="José">
+                <span id="mistakeUser" class="hiddenMessage">Add user</span>
                 <label for="email">Enter your Email</label>
                 <input id="email" type="email" name="email" placeholder="example@example.com">
+                <span id="mistakeEmail" class="hiddenMessage">Add email</span>
                 <label for="password">Enter your Password</label>
                 <input id="password" type="password" name="password" placeholder="00000">
-                <span id="error" class="escondido">User, Email or Password are incorrect</span>
+                <span id="mistakePassword" class="hiddenMessage">Add password</span>
+                <span id="mistakeData" class="hiddenMessage">Incomplete data</span>
+                <span id="mistakeAll" class="hiddenMessage">User, Email or Password are incorrect</span>
                 <button type="submit">Log in</button>
             </form>
         </section>

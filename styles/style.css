@@ -140,14 +140,14 @@ button:active{
     transform: translateY(4px);
 }
 
-.alerta{
+.visibleMessage{
     margin: 5px 0 -15px;
     color: red;
     font-size: 10px;
     text-align: center;
 }
 
-.escondido{
+.hiddenMessage{
     display: none;
 }
 

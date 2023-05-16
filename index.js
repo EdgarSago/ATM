@@ -16,6 +16,16 @@ const users = [
     }
 ]
 
+function message(type) {
+    let mistake = document.getElementById(`mistake${type}`)
+    mistake.classList.remove('hiddenMessage')
+    mistake.classList.add('visibleMessage')
+    setTimeout(() => {
+        mistake.classList.remove('visibleMessage')
+        mistake.classList.add('hiddenMessage')
+    }, 4000)
+}
+
 function validar(user, email, password) {
     if(user === users[0].userUno && email === users[0].emailUno && password === users[0].passwordUno){
         window.location.href = 'users.html'
@@ -23,10 +33,24 @@ function validar(user, email, password) {
         window.location.href = 'users.html'
     } else if(user === users[2].userTres && email === users[2].emailTres && password === users[2].passwordTres){
         window.location.href = 'users.html'
+    } else if(user === '' && email === '' && password === ''){
+        message('Data')
+    } else if(user === ''){
+        message('User')
+        if(email === ''){
+            message('Email')
+        } else if(password === ''){
+            message('Password')
+        }
+    } else if(email === ''){
+        message('Email')
+        if(password === ''){
+            message('Password')
+        }
+    } else if(password === ''){
+        message('Password')
     } else{
-        let error = document.getElementById('error')
-        error.classList.remove('escondido')
-        error.classList.add('alerta')
+        message('All')
     }
 }
 
