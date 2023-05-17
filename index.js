@@ -16,6 +16,43 @@ const users = [
     }
 ]
 
+const openUsers = document.getElementById('openUsers')
+const ocultoUsers = document.getElementById('ocultoUsers')
+const closeUsers = document.getElementById('closeUsers')
+
+openUsers.addEventListener('click', () => {
+    ocultoUsers.classList.add('show')
+})
+
+closeUsers.addEventListener('click', () => {
+    ocultoUsers.classList.remove('show')
+})
+
+const openAbout = document.getElementById('openAbout')
+const ocultoAbout = document.getElementById('ocultoAbout')
+const closeAbout = document.getElementById('closeAbout')
+
+openAbout.addEventListener('click', () => {
+    ocultoAbout.classList.add('show')
+})
+
+closeAbout.addEventListener('click', () => {
+    ocultoAbout.classList.remove('show')
+})
+
+
+const openContacts = document.getElementById('openContacts')
+const ocultoContacts = document.getElementById('ocultoContacts')
+const closeContacts = document.getElementById('closeContacts')
+
+openContacts.addEventListener('click', () => {
+    ocultoContacts.classList.add('show')
+})
+
+closeContacts.addEventListener('click', () => {
+    ocultoContacts.classList.remove('show')
+})
+
 function message(type) {
     let mistake = document.getElementById(`mistake${type}`)
     mistake.classList.remove('hiddenMessage')
@@ -34,7 +71,9 @@ function validar(user, email, password) {
     } else if(user === users[2].userTres && email === users[2].emailTres && password === users[2].passwordTres){
         window.location.href = 'users.html'
     } else if(user === '' && email === '' && password === ''){
-        message('Data')
+        message('User')
+        message('Email')
+        message('Password')
     } else if(user === ''){
         message('User')
         if(email === ''){
@@ -54,7 +93,7 @@ function validar(user, email, password) {
     }
 }
 
-form.addEventListener('submit', (evento)=>{
+form.addEventListener('submit', (evento) => {
     evento.preventDefault()
     let user = document.querySelector('#user').value;
     let email = document.querySelector('#email').value;

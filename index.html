@@ -8,30 +8,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script type="module" src="index.js"></script>
     <title>ATM</title>
 </head>
 <body>
-    <header>
-        <ul id="info">
-            <li>
-                <a href="">Users</a>
-            </li>
-            <li>
-                <a href="">About</a>
-            </li>
-            <li>
-                <a href="">Contacts</a>
-            </li>
-        </ul>
-        <div>
-            <span class="oculto">
-                Usuario: Edgar <br> Email:edgar@gmail.com <br> Password: 12345 <br>
-                Usuario: Rocio <br> Email:rocio@gmail.com <br> Password: 98765 <br>
-                Usuario: Lizeth <br> Email:lizeth@gmail.com <br> Password: 24680
-            </span>
-            <span class="oculto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla et temporibus sit, vero, laborum quasi facilis sed fugit veritatis reiciendis repudiandae soluta quae quisquam inventore eveniet quis voluptates cupiditate? In!</span>
-            <span class="oculto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam deleniti molestias dolore corporis dignissimos pariatur consequatur voluptate qui fuga sit explicabo quisquam, culpa eius, facilis quia accusantium vero! Voluptatibus, dignissimos.</span>
+    <header id="info">
+        <button id="openUsers" class="btn_nav">Users</button>
+        <button id="openAbout" class="btn_nav">About</button>
+        <button id="openContacts" class="btn_nav">Contacts</button>
+        <div id="ocultoUsers" class="hidden_container">
+            <div class="hidden_info">
+                <p>Usuario: Edgar <br> Email:edgar@gmail.com <br> Password: 12345 </p> 
+                <p> Usuario: Rocio <br> Email:rocio@gmail.com <br> Password: 98765 </p>
+                <p> Usuario: Lizeth <br> Email:lizeth@gmail.com <br> Password: 24680 </p>
+                <button id="closeUsers" class="btn_nav">Close</button>
+            </div>
+        </div>
+        <div id="ocultoAbout" class="hidden_container">
+            <div class="hidden_info">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla et temporibus sit, vero, laborum quasi facilis sed fugit veritatis reiciendis repudiandae soluta quae quisquam inventore eveniet quis voluptates cupiditate? In!</p>
+                <button id="closeAbout" class="btn_nav">Close</button>
+            </div>
+        </div>
+        <div id="ocultoContacts" class="hidden_container">
+            <div class="hidden_info">
+                <p><span class="material-symbols-outlined"> call </span> (55) 00 00 00 00 </p>
+                <p><span class="material-symbols-outlined"> location_on </span>Lorem ipsum dolor sit amet consectetur.</p>
+                <p><span class="material-symbols-outlined"> alternate_email </span>customer_service@sagobank.com</p>
+                <button id="closeContacts" class="btn_nav">Close</button>
+            </div>
         </div>
     </header>
     <main>
@@ -50,7 +56,6 @@
                 <label for="password">Enter your Password</label>
                 <input id="password" type="password" name="password" placeholder="00000">
                 <span id="mistakePassword" class="hiddenMessage">Add password</span>
-                <span id="mistakeData" class="hiddenMessage">Incomplete data</span>
                 <span id="mistakeAll" class="hiddenMessage">User, Email or Password are incorrect</span>
                 <button type="submit">Log in</button>
             </form>
