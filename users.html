@@ -14,18 +14,52 @@
 </head>
 <body>
     <header class="off">
-        <button id="exit">Sign off</button>
+        <div>
+            <button id="signOff" >Sign off</button>
+        </div>
+        <div id="exitContainer" class="hidden_container">
+            <div id="hiddenExit" class="hidden_info">
+                <img src="assets/logoBank.svg" alt="Logo de SagoBank" class="img">
+                <h1>SAGOBANK</h1>
+                <p>Thanks for visiting.</p>
+                <p>Come back soon.</p>
+                <button id="exit">Exit</button>
+                <button id="goBack">Go back</button>
+            </div>
+        </div>
     </header>
     <main>
         <section class="logo">
-            <img src="assets/logoBank.svg" alt="Logo de Sago Bank">
-            <h1>SAGO BANK</h1>
+            <img src="assets/logoBank.svg" alt="Logo de SagoBank" class="img">
+            <h1>SAGOBANK</h1>
         </section>
         <section>
-            <form id="form">
+            <h2>WELCOME</h2>
+        </section>
+        <section id="twoForm">
+            <form id="accountOne" class="form">
+                <h4>Main account</h4>
                 <input id="balance" type="number" name="balance">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>Balance</button>
+                <h5>Balance</h5>
+                <input id="transferSavings" type="number" name="transferSavings">
+                <span class="material-symbols-outlined">attach_money</span>
+                <button>Transfer to savings account</button>
+                <input id="deposit" type="number" name="deposit">
+                <span class="material-symbols-outlined">attach_money</span>
+                <button>To deposit</button>
+                <input id="withdraw" type="number" name="withdraw">
+                <span class="material-symbols-outlined">attach_money</span>
+                <button>Withdraw</button>
+            </form>
+            <form id="accountTwo" class="form">
+                <h4>Savings account</h4>
+                <input id="balance" type="number" name="balance">
+                <span class="material-symbols-outlined">attach_money</span>
+                <h5>Balance</h5>
+                <input id="transferMain" type="number" name="transferMain">
+                <span class="material-symbols-outlined">attach_money</span>
+                <button>Transfer to main account</button>
                 <input id="deposit" type="number" name="deposit">
                 <span class="material-symbols-outlined">attach_money</span>
                 <button>To deposit</button>

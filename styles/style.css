@@ -112,7 +112,7 @@ body{
     margin: 30px auto 30px;
     justify-content: center;
 }
-.logo img{
+.img{
     width: 14vw;
 }
 
@@ -132,6 +132,8 @@ h1{
     width: 60%;
     height: 80%;
     margin: auto;
+    border-radius: 15px;
+    box-shadow:  0 2px 10px var(--color-first);
 }
 
 label{
@@ -183,11 +185,58 @@ input{
 }
 
 /* main users */
-#form .material-symbols-outlined{
+h2{
+    text-align: center;
+    color: var(--color-second);
+    background-color: var(--color-first);
+    width: 195px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow:  0 2px 10px var(--color-first);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-first);
+    color: var(--color-second);
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 0 0 5px 0;
+    border-radius: 15px;
+    box-shadow:  0 2px 10px var(--color-first);
+}
+
+.form button{
+    margin: 10px;
+    padding: 2px 8px;
+    border-radius: 15px;
+    border: 1px solid var(--color-first);
+    background-color: var(--color-second);
+    color: var(--color-first);
+    font-family: var(--font-family-second);
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+
+.form button:hover{
+    border: 1px solid var(--color-second);
+    background-color: var(--color-first);
+    color: var(--color-second);
+}
+
+.form button:active{
+    background-color: var(--color-first);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.form .material-symbols-outlined{
     margin: -23px 150px 0 0;
     color: var(--color-first);
 }
-
 
 /* footer index y users */
 footer{
@@ -198,7 +247,7 @@ footer{
 }
 
 @media only screen and (min-width:480px){
-    .logo img{
+    .img{
         width: 12vw;
     }
     
@@ -208,14 +257,29 @@ footer{
 }
 
 @media only screen and (min-width:768px) {
-    .logo img{
+    .off button{
+        margin: 5px 20px -30px;
+    }
+
+    .img{
         width: 10vw;
     }
     
     h1{
         font-size: 10vw;
     }
+    
+    h2{
+        margin-top: -32px;
+    }
+
+    #twoForm{
+        display: flex;
+        justify-content: center;
+    }
+
     .form{
         width: 30%;
+        margin-bottom: 0;
     }
 }

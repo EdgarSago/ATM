@@ -16,6 +16,7 @@ const users = [
     }
 ]
 
+// Popup para buttons del header 
 const openUsers = document.getElementById('openUsers')
 const ocultoUsers = document.getElementById('ocultoUsers')
 const closeUsers = document.getElementById('closeUsers')
@@ -23,7 +24,6 @@ const closeUsers = document.getElementById('closeUsers')
 openUsers.addEventListener('click', () => {
     ocultoUsers.classList.add('show')
 })
-
 closeUsers.addEventListener('click', () => {
     ocultoUsers.classList.remove('show')
 })
@@ -35,11 +35,9 @@ const closeAbout = document.getElementById('closeAbout')
 openAbout.addEventListener('click', () => {
     ocultoAbout.classList.add('show')
 })
-
 closeAbout.addEventListener('click', () => {
     ocultoAbout.classList.remove('show')
 })
-
 
 const openContacts = document.getElementById('openContacts')
 const ocultoContacts = document.getElementById('ocultoContacts')
@@ -48,11 +46,11 @@ const closeContacts = document.getElementById('closeContacts')
 openContacts.addEventListener('click', () => {
     ocultoContacts.classList.add('show')
 })
-
 closeContacts.addEventListener('click', () => {
     ocultoContacts.classList.remove('show')
 })
 
+// Validacion de datos
 function message(type) {
     let mistake = document.getElementById(`mistake${type}`)
     mistake.classList.remove('hiddenMessage')
