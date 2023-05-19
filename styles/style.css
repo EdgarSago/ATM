@@ -61,7 +61,7 @@ body{
 .hidden_info{
     background-color: var(--color-second);
     max-width: 100%;
-    padding: 30px 30px;
+    padding: 30px 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
     text-align: center;
@@ -69,7 +69,7 @@ body{
 }
 
 .hidden_info p{
-    padding: 10px;
+    padding: 18px;
 }
 
 .hidden_info .material-symbols-outlined{
@@ -187,8 +187,8 @@ input{
 /* main users */
 h2{
     text-align: center;
-    color: var(--color-second);
-    background-color: var(--color-first);
+    color: var(--color-first);
+    background-color: var(--color-second);
     width: 195px;
     margin: auto;
     border-radius: 15px;

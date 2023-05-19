@@ -1,18 +1,18 @@
 const users = [
     {
-        userUno: 'Edgar',
-        emailUno: 'edgar@gmail.com',
-        passwordUno: '12345'
+        userOne: 'Edgar',
+        emailOne: 'edgar@gmail.com',
+        passwordOne: '12345'
     },
     {
-        userDos: 'Rocio',
-        emailDos: 'rocio@gmail.com',
-        passwordDos: '98765'
+        userTwo: 'Rocio',
+        emailTwo: 'rocio@gmail.com',
+        passwordTwo: '98765'
     },
     {
-        userTres: 'Lizeth',
-        emailTres: 'lizeth@gmail.com',
-        passwordTres: '24680'
+        userThree: 'Lizeth',
+        emailThree: 'lizeth@gmail.com',
+        passwordThree: '24680'
     }
 ]
 
@@ -62,11 +62,11 @@ function message(type) {
 }
 
 function validar(user, email, password) {
-    if(user === users[0].userUno && email === users[0].emailUno && password === users[0].passwordUno){
+    if(user === users[0].userOne && email === users[0].emailOne && password === users[0].passwordOne){
         window.location.href = 'users.html'
-    } else if(user === users[1].userDos && email === users[1].emailDos && password === users[1].passwordDos){
+    } else if(user === users[1].userTwo && email === users[1].emailTwo && password === users[1].passwordTwo){
         window.location.href = 'users.html'
-    } else if(user === users[2].userTres && email === users[2].emailTres && password === users[2].passwordTres){
+    } else if(user === users[2].userThree && email === users[2].emailThree && password === users[2].passwordThree){
         window.location.href = 'users.html'
     } else if(user === '' && email === '' && password === ''){
         message('User')
