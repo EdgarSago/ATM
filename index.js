@@ -63,11 +63,11 @@ function message(type) {
 
 function validar(user, email, password) {
     if(user === users[0].userOne && email === users[0].emailOne && password === users[0].passwordOne){
-        window.location.href = 'users.html'
+        window.location.href = 'userOne.html'
     } else if(user === users[1].userTwo && email === users[1].emailTwo && password === users[1].passwordTwo){
-        window.location.href = 'users.html'
+        window.location.href = 'userTwo.html'
     } else if(user === users[2].userThree && email === users[2].emailThree && password === users[2].passwordThree){
-        window.location.href = 'users.html'
+        window.location.href = 'userThree.html'
     } else if(user === '' && email === '' && password === ''){
         message('User')
         message('Email')
