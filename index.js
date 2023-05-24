@@ -2,64 +2,70 @@ const users = [
     {
         userOne: 'Edgar',
         emailOne: 'edgar@gmail.com',
-        passwordOne: '12345'
+        passwordOne: '12345',
+        mainAccountOne: 150,
+        savingsAccountOne: 100
     },
     {
         userTwo: 'Rocio',
         emailTwo: 'rocio@gmail.com',
-        passwordTwo: '98765'
+        passwordTwo: '98765',
+        mainAccountTwo: 300,
+        savingsAccountTwo: 150
     },
     {
         userThree: 'Lizeth',
         emailThree: 'lizeth@gmail.com',
-        passwordThree: '24680'
+        passwordThree: '24680',
+        mainAccountOneThree: 200,
+        savingsAccountThree: 150
     }
-]
+];
 
 // Popup para buttons del header 
-const openUsers = document.getElementById('openUsers')
-const ocultoUsers = document.getElementById('ocultoUsers')
-const closeUsers = document.getElementById('closeUsers')
+const openUsers = document.getElementById('openUsers');
+const ocultoUsers = document.getElementById('ocultoUsers');
+const closeUsers = document.getElementById('closeUsers');
 
 openUsers.addEventListener('click', () => {
-    ocultoUsers.classList.add('show')
-})
+    ocultoUsers.classList.add('show');
+});
 closeUsers.addEventListener('click', () => {
-    ocultoUsers.classList.remove('show')
-})
+    ocultoUsers.classList.remove('show');
+});
 
-const openAbout = document.getElementById('openAbout')
-const ocultoAbout = document.getElementById('ocultoAbout')
-const closeAbout = document.getElementById('closeAbout')
+const openAbout = document.getElementById('openAbout');
+const ocultoAbout = document.getElementById('ocultoAbout');
+const closeAbout = document.getElementById('closeAbout');
 
 openAbout.addEventListener('click', () => {
-    ocultoAbout.classList.add('show')
-})
+    ocultoAbout.classList.add('show');
+});
 closeAbout.addEventListener('click', () => {
-    ocultoAbout.classList.remove('show')
-})
+    ocultoAbout.classList.remove('show');
+});
 
-const openContacts = document.getElementById('openContacts')
-const ocultoContacts = document.getElementById('ocultoContacts')
-const closeContacts = document.getElementById('closeContacts')
+const openContacts = document.getElementById('openContacts');
+const ocultoContacts = document.getElementById('ocultoContacts');
+const closeContacts = document.getElementById('closeContacts');
 
 openContacts.addEventListener('click', () => {
-    ocultoContacts.classList.add('show')
-})
+    ocultoContacts.classList.add('show');
+});
 closeContacts.addEventListener('click', () => {
-    ocultoContacts.classList.remove('show')
-})
+    ocultoContacts.classList.remove('show');
+});
 
 // Validacion de datos
 function message(type) {
     let mistake = document.getElementById(`mistake${type}`)
-    mistake.classList.remove('hiddenMessage')
-    mistake.classList.add('visibleMessage')
+    mistake.classList.remove('hiddenMessage');
+    mistake.classList.add('visibleMessage');
     setTimeout(() => {
-        mistake.classList.remove('visibleMessage')
-        mistake.classList.add('hiddenMessage')
+        mistake.classList.remove('visibleMessage');
+        mistake.classList.add('hiddenMessage');
     }, 4000)
-}
+};
 
 function validar(user, email, password) {
     if(user === users[0].userOne && email === users[0].emailOne && password === users[0].passwordOne){
@@ -69,32 +75,32 @@ function validar(user, email, password) {
     } else if(user === users[2].userThree && email === users[2].emailThree && password === users[2].passwordThree){
         window.location.href = 'userThree.html'
     } else if(user === '' && email === '' && password === ''){
-        message('User')
-        message('Email')
-        message('Password')
+        message('User');
+        message('Email');
+        message('Password');
     } else if(user === ''){
-        message('User')
+        message('User');
         if(email === ''){
-            message('Email')
+            message('Email');
         } else if(password === ''){
-            message('Password')
+            message('Password');
         }
     } else if(email === ''){
-        message('Email')
+        message('Email');
         if(password === ''){
-            message('Password')
+            message('Password');
         }
     } else if(password === ''){
-        message('Password')
+        message('Password');
     } else{
-        message('All')
+        message('All');
     }
-}
+};
 
 form.addEventListener('submit', (evento) => {
-    evento.preventDefault()
+    evento.preventDefault();
     let user = document.querySelector('#user').value;
     let email = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
-    validar(user, email, password)
-})
+    validar(user, email, password);
+});

@@ -38,36 +38,46 @@
             <h2>¡WELCOME! Edgar</h2>
         </section>
         <section id="twoForm">
-            <form id="accountOne" class="form">
+            <form class="form">
                 <h4>Main account</h4>
-                <input id="balanceMain" type="text" name="balance">
+                <input id="balanceMain" data-type="currency">
                 <span class="material-symbols-outlined">attach_money</span>
                 <h5>Balance</h5>
-                <input id="transferSavings" type="number" name="transferSavings">
+                <input id="transferSavings" type="number">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>Transfer to savings account</button>
-                <input id="deposit" type="number" name="deposit">
+                <button id="btn_transferSavings">Transfer to savings account</button>
+                <input id="depositMain" type="number">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>To deposit</button>
-                <input id="withdraw" type="number" name="withdraw">
+                <button id="btn_depositMain">To deposit</button>
+                <input id="withdrawMain" type="number">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>Withdraw</button>
+                <button id="btn_withdrawMain">Withdraw</button>
             </form>
-            <form id="accountTwo" class="form">
+            <form class="form">
                 <h4>Savings account</h4>
-                <input id="balanceSavings" type="number" name="balance">
+                <input id="balanceSavings" data-type="currency">
                 <span class="material-symbols-outlined">attach_money</span>
                 <h5>Balance</h5>
-                <input id="transferMain" type="number" name="transferMain">
+                <input id="transferMain" type="number">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>Transfer to main account</button>
-                <input id="deposit" type="number" name="deposit">
+                <button id="btn_transferMain">Transfer to main account</button>
+                <input id="depositSavings" type="number">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>To deposit</button>
-                <input id="withdraw" type="number" name="withdraw">
+                <button id="btn_depositSavings">To deposit</button>
+                <input id="withdrawSavings" type="number">
                 <span class="material-symbols-outlined">attach_money</span>
-                <button>Withdraw</button>
+                <button id="btn_withdrawSavings">Withdraw</button>
             </form>
+        </section>
+        <section id="mistake10" class="hidden_container">
+            <span class="hidden_info">
+                <p>Balance cannot be less than $10 USD</p>
+            </span>
+        </section>
+        <section id="mistake990" class="hidden_container">
+            <span class="hidden_info">
+                <p>Balance cannot exceed $990 USD</p>
+            </span>
         </section>
     </main>
     <footer>
