@@ -22,6 +22,8 @@ const users = [
     }
 ];
 
+document.getElementById('welcome').textContent = '¡WELCOME! ' + users[0].userOne;
+
 // accountOne
 let balanceMain = document.getElementById('balanceMain').value = users[0].mainAccountOne + ' USD';
 let btn_transferSavings = document.getElementById('btn_transferSavings');
@@ -153,10 +155,6 @@ btn_withdrawSavings.addEventListener('click', (evento) => {
 });
 
 // Popup para button signOff 
-const signOff = document.getElementById('signOff');
-const exitContainer = document.getElementById('exitContainer');
-const goBack = document.getElementById('goBack');
-
 signOff.addEventListener('click', () => {
     exitContainer.classList.add('show');
 });
