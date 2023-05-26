@@ -17,7 +17,7 @@ const users = [
         userThree: 'Lizeth',
         emailThree: 'lizeth@gmail.com',
         passwordThree: '24680',
-        mainAccountOneThree: 200,
+        mainAccountThree: 200,
         savingsAccountThree: 150
     }
 ];
@@ -47,16 +47,20 @@ function message(type) {
 // form: accountOne
 // button transferSavings
 function mainToSavings() {
-    let balanceMain = parseInt(document.getElementById('balanceMain').value = users[0].mainAccountOne);
-    let balanceSavings = parseInt(document.getElementById('balanceSavings').value = users[0].savingsAccountOne);
+    let balanceMain = parseInt(document.getElementById('balanceMain').value);
+    let balanceSavings = parseInt(document.getElementById('balanceSavings').value);
     let transferSavings = parseInt(document.getElementById('transferSavings').value);
     let total1 = balanceMain - transferSavings;
     let total2 = balanceSavings + transferSavings;
     if (total1 >= 10 && total2 <= 990) {
         document.getElementById('balanceMain').value = total1 + ' USD';
         document.getElementById('balanceSavings').value = total2 + ' USD';
-    } else{
-        message('10');
+    }else if (total2 > 990) {
+        message('Savings990');
+    }else if (total1 < 10) {
+        message('Main10');
+    } else {
+        message('Amount');
     }
 };
 
@@ -67,13 +71,15 @@ btn_transferSavings.addEventListener('click', (evento) => {
 
 // button depositMain
 function depositToMain() {
-    let balanceMain = parseInt(document.getElementById('balanceMain').value = users[0].mainAccountOne);
+    let balanceMain = parseInt(document.getElementById('balanceMain').value);
     let depositMain = parseInt(document.getElementById('depositMain').value);
     let total = balanceMain + depositMain;
     if (total <= 990) {
         document.getElementById('balanceMain').value = total + ' USD';
+    } else if(total > 990){
+        message('Main990');
     } else{
-        message('990');
+        message('Amount');
     }
 };
 
@@ -84,13 +90,15 @@ btn_depositMain.addEventListener('click', (evento) => {
 
 // button withdrawMain
 function withdrawToMain() {
-    let balanceMain = parseInt(document.getElementById('balanceMain').value = users[0].mainAccountOne);
+    let balanceMain = parseInt(document.getElementById('balanceMain').value);
     let withdrawMain = parseInt(document.getElementById('withdrawMain').value);
     let total = balanceMain - withdrawMain;
     if (total >= 10) {
         document.getElementById('balanceMain').value = total + ' USD';
-    } else {
-        message('10');
+    } else if(total < 10){
+        message('Main10');
+    } else{
+        message('Amount');
     }
 };
 
@@ -102,16 +110,20 @@ btn_withdrawMain.addEventListener('click', (evento) => {
 // form accountTwo
 // button transferMain
 function SavingsToMain() {
-    let balanceMain = parseInt(document.getElementById('balanceMain').value = users[0].mainAccountOne);
-    let balanceSavings = parseInt(document.getElementById('balanceSavings').value = users[0].savingsAccountOne);
+    let balanceMain = parseInt(document.getElementById('balanceMain').value);
+    let balanceSavings = parseInt(document.getElementById('balanceSavings').value);
     let transferMain = parseInt(document.getElementById('transferMain').value);
     let total1 = balanceSavings - transferMain;
     let total2 = balanceMain + transferMain;
     if (total1 >= 10 && total2 <= 990) {
-        document.getElementById('balanceSavings').value = total1+ ' USD';
+        document.getElementById('balanceSavings').value = total1 + ' USD';
         document.getElementById('balanceMain').value = total2 + ' USD';
-    } else {
-        message('10');
+    }else if (total2 > 990) {
+        message('Main990');
+    } else if(total1 < 10){
+        message('Savings10');
+    } else{
+        message('Amount');
     }
 };
 
@@ -122,13 +134,15 @@ btn_transferMain.addEventListener('click', (evento) => {
 
 // button depositSavings
 function depositToSavings() {
-    let balanceSavings = parseInt(document.getElementById('balanceSavings').value = users[0].savingsAccountOne);
+    let balanceSavings = parseInt(document.getElementById('balanceSavings').value);
     let depositSavings = parseInt(document.getElementById('depositSavings').value);
     let total = balanceSavings + depositSavings;
     if (total <= 990) {
-        document.getElementById('balanceSavings').value = total + (' USD');
-    } else {
-        message('990');
+        document.getElementById('balanceSavings').value = total + ' USD';
+    } else if(total > 990){
+        message('Savings990');
+    } else{
+        message('Amount');
     }
 };
 
@@ -139,13 +153,15 @@ btn_depositSavings.addEventListener('click', (evento) => {
 
 // button withdrawSavings
 function withdrawToSavings() {
-    let balanceSavings = parseInt(document.getElementById('balanceSavings').value = users[0].savingsAccountOne);
+    let balanceSavings = parseInt(document.getElementById('balanceSavings').value);
     let withdrawSavings = parseInt(document.getElementById('withdrawSavings').value);
     let total = balanceSavings - withdrawSavings;
     if (total >= 10) {
-        document.getElementById('balanceSavings').value = total + (' USD');
-    } else {
-        message('10');
+        document.getElementById('balanceSavings').value = total + ' USD';
+    } else if(total < 10){
+        message('Savings10');
+    } else{
+        message('Amount');
     }
 };
 
