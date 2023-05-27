@@ -24,8 +24,8 @@ const users = [
 
 document.getElementById('welcome').textContent = '¡WELCOME! ' + users[0].userOne;
 
-let correctAudio = new Audio('assets/correct.wav');
-let errorAudio = new Audio('assets/error.wav');
+let correctAudio = new Audio('assets/correct.mp3');
+let errorAudio = new Audio('assets/error.mp3');
 
 // accountOne
 let balanceMain = document.getElementById('balanceMain').value = users[0].mainAccountOne + ' USD';
