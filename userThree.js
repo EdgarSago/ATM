@@ -24,6 +24,9 @@ const users = [
 
 document.getElementById('welcome').textContent = '¡WELCOME! ' + users[2].userThree;
 
+let correctAudio = new Audio('assets/correct.wav');
+let errorAudio = new Audio('assets/error.wav');
+
 // accountOne
 let balanceMain = document.getElementById('balanceMain').value = users[2].mainAccountThree + ' USD';
 let btn_transferSavings = document.getElementById('btn_transferSavings');
@@ -39,6 +42,7 @@ let btn_withdrawSavings = document.getElementById('btn_withdrawSavings');
 function message(type) {
     let mistake = document.getElementById(`mistake${type}`);
     mistake.classList.add('show');
+    errorAudio.play();
     setTimeout(() => {
         mistake.classList.remove('show');
     }, 3000);
@@ -55,6 +59,7 @@ function mainToSavings() {
     if (total1 >= 10 && total2 <= 990) {
         document.getElementById('balanceMain').value = total1 + ' USD';
         document.getElementById('balanceSavings').value = total2 + ' USD';
+        correctAudio.play();
     }else if (total2 > 990) {
         message('Savings990');
     }else if (total1 < 10) {
@@ -76,10 +81,11 @@ function depositToMain() {
     let total = balanceMain + depositMain;
     if (total <= 990) {
         document.getElementById('balanceMain').value = total + ' USD';
+        correctAudio.play();
     } else if(total > 990){
         message('Main990');
     } else{
-        message('Amount')
+        message('Amount');
     }
 }
 
@@ -95,10 +101,11 @@ function withdrawToMain() {
     let total = balanceMain - withdrawMain;
     if (total >= 10) {
         document.getElementById('balanceMain').value = total + ' USD';
+        correctAudio.play();
     } else if(total < 10){
         message('Main10');
     } else{
-        message('Amount')
+        message('Amount');
     }
 }
 
@@ -118,12 +125,13 @@ function savingsToMain() {
     if (total1 >= 10 && total2 <= 990) {
         document.getElementById('balanceSavings').value = total1 + ' USD';
         document.getElementById('balanceMain').value = total2 + ' USD';
+        correctAudio.play();
     }else if (total2 > 990) {
         message('Main990');
     } else if(total1 < 10){
         message('Savings10');
     } else{
-        message('Amount')
+        message('Amount');
     }
 }
 
@@ -139,6 +147,7 @@ function depositToSavings() {
     let total = balanceSavings + depositSavings;
     if (total <= 990) {
         document.getElementById('balanceSavings').value = total + ' USD';
+        correctAudio.play();
     } else if(total > 990){
         message('Savings990');
     } else{
@@ -158,6 +167,7 @@ function withdrawToSavings() {
     let total = balanceSavings - withdrawSavings;
     if (total >= 10) {
         document.getElementById('balanceSavings').value = total + ' USD';
+        correctAudio.play();
     } else if(total < 10){
         message('Savings10');
     } else{

@@ -17,7 +17,7 @@ const users = [
         userThree: 'Lizeth',
         emailThree: 'lizeth@gmail.com',
         passwordThree: '24680',
-        mainAccountOneThree: 200,
+        mainAccountThree: 200,
         savingsAccountThree: 150
     }
 ];
